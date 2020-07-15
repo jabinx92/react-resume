@@ -1,0 +1,206 @@
+<html>
+  <head>
+    <title>Resume | Jonathan Won</title>
+    <meta charset="UTF-8"><!--[if IE]><![endif]-->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Jonathan Won | Web Developer</title>
+    <link rel="shortcut icon" href="http://jonathanwon.com/" hreflang="en-us">
+
+    <meta property="og:title" content="Resume | Jonathan Won" />
+    <meta property="og:description" content="Design-minded, detail oriented web developer passionate about combining beautiful code with beautiful design." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.jonathanwon.com/" />
+    <meta property="og:site_name" content="Resume | Jonathan Won" />
+    <meta property="og:image" content="http://jonathanwon.com/" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="672" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:locale" content="en_US">
+
+    <meta name="description" content="Design-minded, detail oriented web developer passionate about combining beautiful code with beautiful design.">
+    <meta name="keywords" content="design, development, web, johnnywony, jonathan, won, javascript, react">
+    <meta name="google-site-verification" content="DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk" />
+
+    <meta itemprop="name" content="Resume | Jonathan Won">
+    <meta itemprop="description" content="Design-minded, detail oriented web developer passionate about combining beautiful code with beautiful design.">
+    <meta itemprop="image" content="http://jonathanwon.com/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://jonathanwon.com/">
+    <meta name="twitter:site" content="@johnnywony">
+    <meta name="twitter:creator" content="@johnnywony">
+    <meta name="twitter:title" content="Resume | Jonathan Won">
+    <meta name="twitter:description" content="Design-minded, detail oriented web developer passionate about combining beautiful code with beautiful design.">
+    <meta name="twitter:image:src" content="http://jonathanwon.com/">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:200,300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+<body>
+  <div id="content"></div>
+  <script src="https://fb.me/react-0.14.6.js"></script>
+  <script src="https://fb.me/react-dom-0.14.6.js"></script>
+  <script src="https://unpkg.com/react@0.12.1/dist/JSXTransformer.js"></script>
+  <script type="text/jsx">
+
+    var DATA = {
+      name: "Hello, I am Johnny",
+      subtext: "Web Developer based in San Francisco, CA",
+      jobStatus: "Software Developer",
+      twitterURL: 'https://www.twitter.com',
+      instaURL: 'https://www.instagram.com/johnnywony/',
+      githubURL: 'https://github.com/jabinx92',
+      linkedinURL: 'https://www.linkedin.com/in/jonathanwon',
+      resumeURL: 'http://brittanychiang.com/resume.pdf'
+    }
+
+    var App = React.createClass({
+      render: function() {
+        return(
+          <div className="app">
+            <Left
+              name={this.props.profileData.name}
+              subtext={this.props.profileData.subtext}
+              jobStatus={this.props.profileData.jobStatus}
+              twitterURL={this.props.profileData.twitterURL}
+              instaURL={this.props.profileData.instaURL}
+              githubURL={this.props.profileData.githubURL}
+              linkedinURL={this.props.profileData.linkedinURL}
+            />
+            <Right
+              intro={this.props.profileData.intro}
+              resumeURL={this.props.profileData.resumeURL}
+            />
+          </div>
+        );
+      }
+    });
+
+    var Left = React.createClass({
+      render: function() {
+        return(
+          <div className="left">
+            <div className="bg-img"></div>
+            <div className="left-inner">
+              <div className="info">
+                <h2 className="name">{this.props.name}</h2>
+                <div className="subtext">{this.props.subtext}</div>
+                <div className="jobStatus">{this.props.jobStatus}</div>
+                <div className="social-links">
+                  <a href={this.props.instaURL} target="_blank"><i className="fa fa-instagram"></i></a>
+                  <a href={this.props.githubURL} target="_blank"><i className="fa fa-github"></i></a>
+                  <a href={this.props.linkedinURL}  target="_blank"><i className="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      }
+    });
+
+    var Right = React.createClass({
+      render: function() {
+        return(
+          <div className="right">
+            <div className="right-inner">
+              <div className="introduction">
+                <h4>Intro</h4>
+                <div className="content">
+                  <p className="intro-p">I&#39;m currently a self-taught software developer. I am learning through reading documentation and taking online courses ( Udemy.com - Complete Javascript Course, Complete React Course, Data Structures & Algorithms, Javascript the Weird Parts).</p>
+                  <p className="intro-p">I enjoy problem-solving and building things on the web as a front-end engineer. I&#39;m experienced in developing and designing products for the web, from simple landing pages to web apps.</p>
+                  {/* <span className="intro-p job-pls">I&#39;m currently looking for my third and final co-op (from July to December 2017) before I graduate in 2018!</span> */}
+                </div>
+              </div>
+              <div className="skills">
+                <h4>Skills</h4>
+                <div className="content">
+                  <div className="skill-category">
+                    <strong>Languages: &nbsp;</strong>
+                    <span>JavaScript (ES6), HTML5, CSS3</span>
+                  </div>
+                  <div className="skill-category">
+                    <strong>Libraries &amp; Frameworks: &nbsp;</strong>
+                    <span>React, jQuery, Bootstrap, Node</span>
+                  </div>
+                  <div className="skill-category">
+                    <strong>Tools: &nbsp;</strong>
+                    <span>Git &amp; Github, GitBash, Command Line, Wix</span>
+                  </div>
+                </div>
+              </div>
+              <div className="education">
+                <h4>Education</h4>
+                <div className="content">
+                  <div className="university"><a href="http://www.sfsu.edu/" target="_blank">San Francisco State University</a></div>
+                  <div className="major"><strong>Major:</strong> Marketing</div>
+                  <div className="grad-date">Graduated: May 2015</div>
+                </div>
+              </div>
+              <div className="experience">
+                <h4>Experience</h4>
+                <div className="content">
+                  <div className="exp-item">
+                    <div className="job">
+                      <a className="company" href="https://www.globalsynturf.com/" target="_blank">Global Syn-Turf</a>
+                      <div className="duration">Apr 2018 &mdash; Aug 2019</div>
+                    </div>
+                    <div className="title">Order Processor Specialist</div>
+                    <ul className="description">
+                      <li>Expertise in various Business Management Softwares including Oracle Netsuite, SPS Commerce, Rollmaster</li>
+                      <li>Manage orders through various online e-commerce retail channel : Home Depot, Walmart, Amazon, Menards, and Shopify accounts.</li>
+                      <li>Create quotes, bill of ladings, and purchase orders with Microsoft Office and Google Suite. Excel Experience</li>
+                    </ul>
+                  </div>
+                  <div className="exp-item">
+                    <div className="job">
+                      <a className="company" href="https://www.comba-telecom.com/en/" target="_blank">Comba Telecom</a>
+                      <div className="duration">Nov 2017 &mdash; Jan 2018</div>
+                    </div>
+                    <div className="title">Operations Coordinator</div>
+                    <ul className="description">
+                      <li>Worked with Logistics Coordinator to fulfill all customer purchase orders with Salesforce CRM and SAP Software</li>
+                      <li>Developed customer invoices and packing slips with Microsoft Excel and Microsoft Office</li>
+                      <li>Assisted Logistics Coordinator to manage the US warehouse & inventory</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="projects">
+                <h4>Projects</h4>
+                <div className="content">
+                  <div className="project-item">
+                    <a className="project-title" href="http://jonathanwon.com/" target="_blank">jonathanwon.com</a>
+                    <p className="project-desc">Portfolio site to showcase my skills and past work --- In production...</p>
+                  </div>
+                  <div className="project-item" >
+                    <a className="project-title" href="http://jonathanwon.com/">Project #1</a>
+                    <p className="project-desc">In production...</p>
+                  </div>
+                  <div className="project-item">
+                    <a className="project-title" href="http://jonathanwon.com/" target="_blank">Project #2</a>
+                    <p className="project-desc">In production...</p>
+                  </div>
+                  <div className="project-item">
+                    <a className="project-title" href="http://jonathanwon.com/" target="_blank">Project #3</a>
+                    <p className="project-desc">In production...</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      }
+    });
+
+    ReactDOM.render(
+      <App profileData={DATA}/>,
+      document.getElementById('content')
+    );
+
+
+  </script>
+</body>
+</html>
